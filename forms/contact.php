@@ -1,9 +1,9 @@
 <?php
 $to = 'challengnegknow@gmail.com';
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-$from = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS);
+$name = $_POST['name'];
+$from = $_POST['email'];
+$subject = $_POST['subject'];
+$message =  $_POST['message'];
 
 if (filter_var($from, FILTER_VALIDATE_EMAIL)) {
     $headers = ['From' => ($name?"<$name> ":'').$from,
