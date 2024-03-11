@@ -1,5 +1,5 @@
 <?php
-  $to = 'challengnegknow@gmail.com';
+$to = 'challengnegknow@gmail.com';
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 $from = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
