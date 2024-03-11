@@ -667,6 +667,26 @@ section {
   background: #ef6603;
 }
 
+.features .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features .content ul li {
+  padding-left: 60px;
+  position: relative;
+}
+
+.features .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #ef6603;
+  padding-left: 28px;
+  line-height: 1;
+}
+
 @media (max-width: 768px) {
   .features .nav-link i {
     padding: 0;
