@@ -58,9 +58,9 @@
           <li><a class="nav-link scrollto" href="#dates">Important Dates</a></li>
           <li class="dropdown"><a href="#tasks"><span>Tasks</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto" data-bs-toggle="collapse"  role="button" aria-expanded="false" aria-controls="collapseTab1" href="#collapseTab1">Protein-Protein Interaction Prediction</a></li>
-              <li><a class="nav-link scrollto" data-bs-toggle="collapse"  role="button" aria-expanded="false" aria-controls="collapseTab2" href="#collapseTab2">Disease Prediction</a></li>
-              <li><a class="nav-link scrollto" data-bs-toggle="collapse"  role="button" aria-expanded="false" aria-controls="collapseTab3" href="#collapseTab3">Gene-Disease Association Prediction</a></li>
+              <li><a class="nav-link scrollto" role="button" aria-expanded="false" aria-controls="collapseTab1" href="#collapseTab1" onclick="toggleDropdown('collapseTab1', 'collapseTab2', 'collapseTab3')">Protein-Protein Interaction Prediction</a></li>
+              <li><a class="nav-link scrollto" role="button" aria-expanded="false" aria-controls="collapseTab2" href="#collapseTab2" onclick="toggleDropdown('collapseTab2', 'collapseTab1', 'collapseTab3')">Disease Prediction</a></li>
+              <li><a class="nav-link scrollto" role="button" aria-expanded="false" aria-controls="collapseTab3" href="#collapseTab3" onclick="toggleDropdown('collapseTab3', 'collapseTab1', 'collapseTab2')">Gene-Disease Association Prediction</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#submission">Submission</a></li>
@@ -73,6 +73,20 @@
       </nav><!-- .navbar -->
 
     </div>
+  
+    <script>
+      function toggleDropdown(tabId, tabId_close1, tabId_close2) {
+        var currentDropdown = document.getElementById(tabId);
+        currentDropdown.classList.add('show');
+
+        var closeDropdown_1 = document.getElementById(tabId_close1);
+        closeDropdown_1.classList.remove('show');
+
+        var closeDropdown_2 = document.getElementById(tabId_close2);
+        closeDropdown_2.classList.remove('show');
+      }
+    </script>
+
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
