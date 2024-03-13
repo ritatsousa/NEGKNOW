@@ -199,8 +199,10 @@
         <div class="row content" data-aos="fade-up">
           <p>
             The challenge encompasses three distinct biomedical relation prediction tasks: Protein-Protein Interaction Prediction, Gene-Disease Association Prediction, and Disease Prediction. For each task, 
-            the goal is to predict whether a relation exists given two biomedical KG entities (which can belong to the same or different KGs).
-            This is a fundamentally distinct task from link prediction, whose goal is to find new links between entities in the KG, given the existing links among the entities.
+            the goal is to predict whether a relation exists given two biomedical KG entities (which can belong to the same or different KGs). The relations between the entities are not explicitly defined in the KG. Therefore, this is a fundamentally distinct task from link prediction, where the training set relations are part of the KG.
+          </p>
+          <p>
+            To tackle this relation prediction task, common approaches typically employ three steps: (1) generate embeddings for each entity in the KG; (2) aggregate the embeddings of each entity in a pair into a single representation; (3) use these aggregated representations as input to a binary classifier to learn a relation prediction model.
           </p>
           <p>
             For each task, participants will be provided with the KG in OWL format, a set of entity pairs with information regarding the existence of a relation 
@@ -508,8 +510,7 @@
         </div>
 
         <div class="row content" data-aos="fade-up">
-          <p> The submissions should be sent to <b>challengnegknow@gmail.com</b> and should include a <b>group name</b> and a <b>list of the names</b> of all the participants in the group. </p>
-          <p> Participants are required to submit: </p>
+          <p> The submissions should be sent to <b>challengenegknow@gmail.com</b> and should include the <b>group name</b> and a <b>list of full names, positions, affiliations, and mails</b> of all the participants in the group. </p>          <p> Participants are required to submit: </p>
           <ul>
             <li><i class="ri-check-double-line"></i> A <b>CSV file</b> with the predicted labels (0 or 1) for each test instance. Please use the <a href="https://github.com/ritatsousa/NEGKNOW/tree/main/Submission-example.csv"> template file </a> as a reference for the correct format of the prediction file.</li>
             <li><i class="ri-check-double-line"></i> A <b>report</b> detailing the approach they employed. The report should be in PDF format (4-10 pages,  <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw">CEUR Workshop style</a>). </li>
@@ -603,7 +604,7 @@
           <div class="email">
             <i class="bi bi-envelope"></i>
             <h4>Email:</h4>
-            <p>challengnegknow@gmail.com</p>
+            <p>challengenegknow@gmail.com</p>
           </div>
         </div>
 
